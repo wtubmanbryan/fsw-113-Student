@@ -7,6 +7,9 @@
   use the CSS grid to display all five <div> elements contained within
   the 'queryWrapper' <div> on a row next to each other 
   */
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+
   margin: 0 auto;
 }
 
@@ -19,6 +22,9 @@
   use the CSS grid to display the <div> elements contained within
   the 'dataWrapper' <div> in a 2 x 2 grid 
   */
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
   margin: 0 auto;
 }
 
@@ -26,6 +32,7 @@
   text-align: center;
   padding: 5px;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .dataCell {
