@@ -7,10 +7,14 @@
 <html>
     <head>
         <title>My Own Bug Tracker</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div id='reportWrapper' class='reportWrapper'>
-            <div id='topbar' class='topbar'><img src='./images/bug.png' alt='bug icon' style='height:20px; width:20px;' /> Report a New Bug</div>
+                <div id='topbar' class='topbar'>
+                    <img src='./images/bug.png' alt='bug icon' style='height:20px; width:20px;' /> Report a New Bug
+                </div>
                 <form id='bugForm' action='#' onsubmit='reportBug(); return false'>
                     <div id='reporterByDiv' class='userInput'>
                         <input placeholder='Reported By' type='text' id='reportedBy' style='width:97%' />
@@ -31,8 +35,18 @@
                 </form>
             </div>
             <br />
-            <div id='listWrapper' class='listWrapper'></div>
+            <div id='listWrapper' class='listWrapper'>
+                <div>this is a test this is a test this is a test <p class = "myBtn"><button><i class="fa fa-times"></i></button><button><i class="fa fa-check"></i></button></p></div>
+                <div>this is a test this is a test this is a test <p class = "myBtn"><button><i class="fa fa-times"></i></button><button><i class="fa fa-check"></i></button></p></div>
+                <div>this is a test this is a test this is a test <p class = "myBtn"><button><i class="fa fa-times"></i></button><button><i class="fa fa-check"></i></button></p></div>
+                <div>this is a test this is a test this is a test <p class = "myBtn"><button><i class="fa fa-times"></i></button><button><i class="fa fa-check"></i></button></p></div>
+                <div>this is a test this is a test <p class = "myBtn"><button><i class="fa fa-times"></i></button><button><i class="fa fa-check"></i></button></p></div>
+                <div>this is a test this is a test <p class = "myBtn"><button><i class="fa fa-times"></i></button><button><i class="fa fa-check"></i></button></p></div>
+            </div>
         </div>
+
+        <script src="scripts/data.js"></script>
+        <script src="scripts/bug.js"></script>
     </body>
 
 </html>
