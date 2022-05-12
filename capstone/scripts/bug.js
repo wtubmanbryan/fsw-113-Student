@@ -1,7 +1,8 @@
 // Create a variable of the right kind and in the right place such that each new bug that is added can increment that number
 let bugCount = 0;
 let listWrapper = document.querySelector('#listWrapper')
-let submitBtn = document.querySelector('#submitBtn').addEventListener('click', reportBug)
+// let submitBtn = document.querySelector('#submitBtn').addEventListener('click', reportBug)
+let newBug;
 
 class Bug {
     constructor(reportedBy, system, subSystem, bugDesc) {
@@ -17,7 +18,8 @@ class Bug {
     addBug() {
         // Create a div element that displays the bug information input by the user within the "listWrapper" DOM element. 
         // It should also contain buttons whose onClick events will call the deleteBug() and resolveBug() methods (see below). 
-        let div = `<div id ="${bugCount}">Reported by:  ${this.reportedBy} System: ${this.system} / ${this.subSystem}<br>${this.bugDesc}<p class = "myBtn"><button onClick="deleteBug()"><i class="fa fa-times"></i></button><button onClick="resolveBug()"><i class="fa fa-check"></i></button></p></div>`
+        let div = `<div id ="${bugCount}">Reported by:  ${this.reportedBy}<br> System: ${this.system} / ${this.subSystem}<br>${this.bugDesc}<p class = "myBtn">`
+        div += `<button onClick="newBug.deleteBug()"><i class="fa fa-times"></i></button><button onClick="newBug.resolveBug()"><i class="fa fa-check"></i></button></p></div>`
         listWrapper.innerHTML += div
         bugCount++
     }
@@ -25,11 +27,12 @@ class Bug {
     deleteBug() {
         // Create code that will remove the appropriate bug from the DOM. 
         // You may need to Google how to remove an element from the DOM.
-       
+       console.log("Delete Button Clicked")
     }
 
     resolveBug() {
         // Create code that changes the appropriate bug report to a darker color
+        console.log("Resolve Button Clicked")
     }
 }
 
